@@ -13,6 +13,12 @@ type CategoryControllerImpl struct {
 	categoryService service.CategoryService
 }
 
+// return yang sebenarnya adalah categorycontrollerimpl
+
+func NewCategoryController(categoryService service.CategoryService) CategoryController {
+	return &CategoryControllerImpl{categoryService: categoryService}
+}
+
 func (controller *CategoryControllerImpl) Create(ctx *gin.Context) {
 	createdCategory := dto.CategoryCreateRequest{}
 	err := ctx.BindJSON(&createdCategory)
