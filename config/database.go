@@ -4,6 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 	"simple-rest-api-clean-arch/helper"
+
+	_ "github.com/lib/pq"
 )
 
 const (

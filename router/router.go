@@ -11,7 +11,7 @@ func NewRouter(categoryController controller.CategoryController) *gin.Engine {
 
 	router.GET("/category", categoryController.FindAll)
 	router.POST("/category", categoryController.Create)
-	router.PUT("/category", categoryController.Update)
+	router.PUT("/category/:id", categoryController.Update)
 	router.GET("/category/:id", categoryController.FindByID)
 	router.DELETE("/category/:id", categoryController.Delete)
 
